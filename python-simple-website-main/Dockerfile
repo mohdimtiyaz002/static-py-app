@@ -1,18 +1,19 @@
-# Use the official Nginx image as a base image
-FROM nginx:latest
+# Use the official Python image as a base image
+FROM python:3.8-slim
 
-# Remove the default Nginx configuration
-RUN rm /etc/nginx/conf.d/default.conf
+# Set the working directory in the container
+WORKDIR /app
 
-# Copy the custom Nginx configuration to the container
-COPY nginx.conf /etc/nginx/conf.d/
+# Copy the application code into the container
+COPY app.py /app/app.py
+COPY templates /app/templates
+COPY static /app/static
 
-# Copy your HTML/CSS files into the container's Nginx web root directory
-COPY templates /usr/share/nginx/html/templates
-COPY static /usr/share/nginx/html/static
+# Install Flask (and other dependencies if required)
+RUN pip install --no-cache-dir flask
 
-# Expose the port that Nginx is listening on (default is 80)
-EXPOSE 80
+# Expose the port your app is running on (port 4949 as specified in app.py)
+EXPOSE 4949
 
-# Start Nginx when the container starts
-CMD ["nginx", "-g", "daemon off;"]
+# Define the command to run your app
+CMD ["python", "app.py"]
