@@ -1,0 +1,110 @@
+/* Css files (Like this one) are where all the designing of the website is kept. */
+
+/* Apply the same font-family to all headings and paragraphs */
+h1,
+h2,
+h3,
+h4,
+p {
+    font-family: "Verdana", Arial, sans-serif;
+}
+
+/* Set some basic styles for the body */
+body {
+    font-family: "Verdana", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(135deg, #1a3a6d, #51adcf);
+    color: #ffffff;
+}
+
+/* Apply styles to the "Get Started" button */
+.add-btn {
+    height: 40px;
+    width: 150px;
+    color: #ffffff;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, border 0.3s;
+}
+
+.add-btn:hover {
+    background-color: #0056b3;
+}
+
+.add-btn:focus {
+    outline: none;
+}
+
+/* Style the form field */
+.form-feild {
+    height: 40px;
+    width: 200px;
+    border: 1px solid #99AAB5;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    background-color: #2C2F33;
+    color: #d5e0e7;
+}
+
+.form-feild:focus {
+    outline: none;
+    border-color: #007BFF;
+    box-shadow: 0 0 5px #007BFF;
+}
+
+/* Add a box shadow to the header */
+header {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Center the text within the header */
+header h1,
+header p {
+    text-align: center;
+}
+
+/* Style the main content container */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Add a subtle background pattern to the main content */
+.main-content {
+    background-image: linear-gradient(45deg, #007BFF 25%, transparent 25%, transparent 75%, #007BFF 75%, #007BFF),
+                         linear-gradient(45deg, #007BFF 25%, transparent 25%, transparent 75%, #007BFF 75%, #007BFF);
+    background-size: 20px 20px;
+    background-position: 0 0, 10px 10px;
+}
+
+/* Style the hero image */
+.hero-image {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* Add some padding to the footer */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Make the footer text smaller */
+.footer p {
+    font-size: 14px;
+}
